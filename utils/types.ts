@@ -18,8 +18,3 @@ export interface SubscriptionType {
     interval: Interval,
     tabName: TabName
 }
-
-export interface PageConfigurations {
-    buyPageUrl: string,
-    productName: ProductName
-}

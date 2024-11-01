@@ -1,7 +1,7 @@
-import {test, expect, Page} from '@playwright/test';
+import { test, expect } from '@playwright/test';
 import { BuyPage } from "../pages/BuyPage";
-import { ProductName, SubscriptionType, PageConfigurations } from "../utils/types";
-import {ProductCard} from "../components/ProductCard";
+import { ProductName, SubscriptionType } from "../utils/types";
+import { ProductCard } from "../components/ProductCard";
 
 // Только для IDEA нужно проверить блок "Get a 90-day trial for your whole team"
 
@@ -106,9 +106,8 @@ test.describe(`Special categories tab tests`, () => {
 })
 
 test.describe.skip(`Card screenshots`, () => {
-  // Попробовать запустить в ci
-  // Задать конфигурацию браузера в конфиге
-
+  // Попробовать разобраться с запуском в ci
+  
   const subscriptionTypes: SubscriptionType[] = [
     { interval: 'Monthly billing', tabName: 'For Individual Use' },
     { interval: 'Monthly billing', tabName: 'For Organizations' },
@@ -133,7 +132,7 @@ test.describe.skip(`Card screenshots`, () => {
   });
 })
 
-test.describe(`Further information block tests ${productName}`, () => {
+test.describe(`Further information block tests`, () => {
   // Сделать скриншот блока
   // Проверить работу ссылок
   // Проверить работу кнопки "Contact us"
